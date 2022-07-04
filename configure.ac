@@ -107,7 +107,7 @@ AC_DEFUN([GET_BINUTILS_PROG], [
             case '$2' in
                 ld) CROSS_$1='ld.lld' ;;
                 'c++filt') CROSS_$1='llvm-cxxfilt' ;;
-                *) ;;
+                *) CROSS_$1='llvm-$2' ;;
             esac
         else
             CROSS_$1="$CROSS_TOOLCHAIN-$2"
